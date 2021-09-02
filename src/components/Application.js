@@ -4,6 +4,8 @@ import "components/Application.scss";
 
 import DayList from "./DayList";
 
+import Appointment from "./Appointment";
+
 const days = [
   {
     id: 1,
@@ -22,13 +24,58 @@ const days = [
   },
 ];
 
-// Now that we've imported the Hook, let's update our Application.js according to the following:
-// The Application component should set the default day state to "Monday"
-// The DayList component should receive the value represented by the state
-// The DayList component should also receive the function that can update the state
+const appointments = [
+  {
+    id: 1,
+    time: "12pm",
+  },
+  {
+    id: 2,
+    time: "1pm",
+    interview: {
+      student: "Lydia Miller-Jones",
+      interviewer: {
+        id: 1,
+        name: "Sylvia Palmer",
+        avatar: "https://i.imgur.com/LpaY82x.png",
+      },
+    },
+  },
+  {
+    id: 3,
+    time: "2pm",
+    interview: {
+      student: "Banana Man",
+      interviewer: {
+        id: 3,
+        name: "Mildred Nazir",
+        avatar: "https://i.imgur.com/T2WwVfS.png",
+      },
+    },
+  },
+  {
+    id: 5,
+    time: "3pm",
+    interview: {
+      student: "Patricia Jones",
+      interviewer: {
+        id: 5,
+        name: "Sven Jones",
+        avatar: "https://i.imgur.com/twYrpay.jpg",
+      },
+    },
+  },
+  {
+    id: 6,
+    time: "4pm",
+  },
+];
 
 export default function Application(props) {
-  const [day, setDay] = useState();
+  const [day, setDay] = useState("Monday");
+  const appointmentList = appointments.map((app) => (
+    <Appointment key={app.id} {...app} />
+  ));
   return (
     <main className='layout'>
       <section className='sidebar'>
@@ -48,7 +95,8 @@ export default function Application(props) {
         />
       </section>
       <section className='schedule'>
-        {/* Replace this with the schedule elements durint the "The Scheduler" activity. */}
+        {appointmentList}
+        <Appointment key='last' time='5pm' />
       </section>
     </main>
   );
