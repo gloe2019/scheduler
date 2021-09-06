@@ -39,7 +39,12 @@ export default function Form(props) {
           <Button danger onClick={cancel}>
             Cancel
           </Button>
-          <Button confirm onClick={props.onSave}>
+          <Button
+            confirm
+            onClick={() => {
+              props.onSave(name, interviewer); //review why you have to make this an arrow function... when you click you want to execute the function, so you must do it as a callback/reference. if you wrote props.onSave, you'll be asking for the result of the function call... we don't do that here!
+            }}
+          >
             Save
           </Button>
         </section>
