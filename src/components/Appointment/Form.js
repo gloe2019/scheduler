@@ -10,7 +10,7 @@ export default function Form(props) {
     setInterviewer(null);
   };
   const cancel = () => {
-    console.log("name", name);
+    // console.log("name", name);
     reset();
     props.onCancel();
   };
