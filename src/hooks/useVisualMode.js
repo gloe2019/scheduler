@@ -4,8 +4,10 @@ const useVisualMode = (initial) => {
   const [history, setHistory] = useState([initial]);
   const transition = (mode, replace = false) => {
     if (replace) {
-      setMode(mode);
-      return;
+      //this also works
+      //setMode(mode);
+      setHistory((prev) => [...prev.slice(0, prev.length - 1), mode]);
+      git;
     }
     setMode(mode);
     setHistory((prev) => [...prev, mode]);

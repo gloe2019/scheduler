@@ -9,7 +9,7 @@ import "./InterviewerList.scss";
 //interviewer = id/#
 //setInterviewer = fnc
 export default function InterviewerList(props) {
-  console.log(">>>IL", props);
+  // console.log(">>>IL", props);
   const { interviewers, value, onChange } = props;
   const listItem = interviewers.map((int) => (
     <InterviewerListItem

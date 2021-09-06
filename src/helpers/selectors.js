@@ -15,8 +15,23 @@ export function getAppointmentsForDay(state, day) {
       }
     }
   }
-  //console.log("dayAppointments", dayAppointments);
   return dayAppointments;
+}
+
+export function getInterviewersForDay(state, day) {
+  const dayInterviewers = [];
+  const foundDay = state.days.find((el) => el.name === day);
+  //console.log("day.name", day.name, "givenDay", givenDay); //no nested for loops
+
+  if (!foundDay || foundDay.interviewers.length === 0) {
+    return dayInterviewers; //check for false case first, return without executing code
+  }
+  for (const int of foundDay.interviewers) {
+    // console.log(state.interviewers[int]);
+    dayInterviewers.push(state.interviewers[int]);
+  }
+  // console.log(dayInterviewers);
+  return dayInterviewers;
 }
 
 export function getInterview(state, interview) {
