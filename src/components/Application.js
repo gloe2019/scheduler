@@ -68,7 +68,27 @@ export default function Application(props) {
   };
 
   const cancelInterview = (id) => {
+    //have app id info passed from onDelete
     console.log(id);
+    // const appToDelete = appointments.find((app) => app.id === id)
+    // console.log("cancelInterview", appToDelete);
+    // appToDelete.interview = null;
+    const appointment = {
+      ...state.appointments[id],
+      interview: null,
+    };
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment,
+    };
+    console.log("appointment to delete", appointment, appointments);
+    return axios.delete(`/api/appointments/${id}`).then((res) => {
+      console.log("delete response", res);
+      setState({
+        ...state,
+        appointments,
+      });
+    });
   };
 
   const appointments = getAppointmentsForDay(state, state.day);

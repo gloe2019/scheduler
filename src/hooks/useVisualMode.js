@@ -7,7 +7,6 @@ const useVisualMode = (initial) => {
       //this also works
       //setMode(mode);
       setHistory((prev) => [...prev.slice(0, prev.length - 1), mode]);
-      git;
     }
     setMode(mode);
     setHistory((prev) => [...prev, mode]);
