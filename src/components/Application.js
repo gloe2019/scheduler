@@ -53,10 +53,22 @@ export default function Application(props) {
       ...state.appointments,
       [id]: appointment,
     };
-    setState({
-      ...state,
-      appointments,
-    });
+
+    //We've updated the state locally, need to make a PUT request to make data persistent
+    return axios
+      .put(`/api/appointments/${id}`, { interview: interview })
+      .then((res) => {
+        console.log(res);
+        //setState only after a successful put request, to ensure data persists!
+        setState({
+          ...state,
+          appointments,
+        });
+      });
+  };
+
+  const cancelInterview = (id) => {
+    console.log(id);
   };
 
   const appointments = getAppointmentsForDay(state, state.day);
@@ -71,6 +83,7 @@ export default function Application(props) {
         interview={interview}
         interviewers={interviewers}
         bookInterview={bookInterview}
+        cancelInterview={cancelInterview}
       />
     );
   });
