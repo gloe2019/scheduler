@@ -37,6 +37,17 @@ const useApplicationData = () => {
       [id]: appointment,
     };
 
+    const selectedDay = state.days.find((day) => day.name === state.day);
+    console.log(">>>>>", selectedDay);
+    const nullAppointments = selectedDay.appointments.filter(
+      (appointment) => appointments[appointment].interview === null
+    ).length;
+
+    const updatedDays = state.days.map((day) =>
+      day.name === state.day ? { ...day, spots: nullAppointments } : day
+    );
+    console.log("...updatedDays", updatedDays);
+
     //We've updated the state locally, need to make a PUT request to make data persistent
     return axios
       .put(`/api/appointments/${id}`, { interview: interview })
@@ -46,12 +57,12 @@ const useApplicationData = () => {
         setState({
           ...state,
           appointments,
+          days: updatedDays,
         });
       });
   };
 
   const cancelInterview = (id) => {
-    //have app id info passed from onDelete
     console.log(id);
     const appointment = {
       ...state.appointments[id],
@@ -61,12 +72,24 @@ const useApplicationData = () => {
       ...state.appointments,
       [id]: appointment,
     };
-    console.log("appointment to delete", appointment, appointments);
+
+    const selectedDay = state.days.find((day) => day.name === state.day);
+    console.log(">>>>>", selectedDay);
+    const nullAppointments = selectedDay.appointments.filter(
+      (appointment) => appointments[appointment].interview === null
+    ).length;
+    // console.log(nullAppointments);
+    const updatedDays = state.days.map((day) =>
+      day.name === state.day ? { ...day, spots: nullAppointments } : day
+    );
+    console.log("...updatedDays", updatedDays);
+
     return axios.delete(`/api/appointments/${id}`).then((res) => {
       console.log("delete response", res);
       setState({
         ...state,
         appointments,
+        days: updatedDays,
       });
     });
   };
