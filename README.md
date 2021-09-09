@@ -7,6 +7,10 @@
 - Scheduler project was a great way to learn and practice React concepts including useEffect, useState, useReducer, creating custom hooks. 
 - This project was developed in a test-driven way. From the onset, components were developed and tested in visually with Storybook. Once components were visually completed, unit tests were written for each component and tests were run with frequently during development until each test passed. After Unit testing, I got to practice Integration testing with Jest and render functions from the react-testing-library to increase code covereage for key components. Once that was completed, E2E testing was done with Cypress to confirm the apps core functionality. 
 
+## Try it out
+- The backend (API/Postgres Database) was deployed to Heroku, and the Frontend is hosted on Netlify. [Check it out](https://613a261b3216250008cd53f7--quizzical-stonebraker-c0e5bf.netlify.app/)
+
+
 ## Screenshots
 ### [Empty Dashboard]()
 ![schedule_empty](https://user-images.githubusercontent.com/46451257/132634997-0727d212-fe0c-4b77-bb1b-2b956581b415.png)
@@ -22,10 +26,6 @@
 
 ### Delete an Interview
 [Deleting an interview](https://user-images.githubusercontent.com/46451257/132634721-d12b1da0-3269-460f-a27f-b5e8624dfe87.mp4)
-
-## Live Preview
-- The backend (API/Postgres Database) has already been deployed to Heroku, and the Frontend will be hosted on Netlify shortly. (Watch this space)
-
 
 ## Setup
 
