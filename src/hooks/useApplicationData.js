@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 
 const useApplicationData = () => {
   const SET_DAY = "SET_DAY";

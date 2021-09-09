@@ -1,7 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 import "./DayListItem.scss";
-import { isProperty } from "@babel/types";
 
 export default function DayListItem(props) {
   const dayClass = classNames("day-list__item", {
