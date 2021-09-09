@@ -16,7 +16,6 @@ const useApplicationData = () => {
   function reducer(state, action) {
     switch (action.type) {
       case SET_DAY:
-        console.log("hit", action.payload);
         return {
           ...state,
           day: action.payload,
@@ -43,7 +42,6 @@ const useApplicationData = () => {
           const nullAppointments = selectedDay.appointments.filter(
             (appointment) => appointments[appointment].interview === null
           ).length;
-          console.log("nullappointments", nullAppointments);
           const updatedDays = state.days.map((day) =>
             day.name === state.day ? { ...day, spots: nullAppointments } : day
           );

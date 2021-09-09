@@ -73,7 +73,6 @@ const useApplicationData = () => {
   };
 
   const cancelInterview = (id) => {
-    console.log(id);
     const appointment = {
       ...state.appointments[id],
       interview: null,

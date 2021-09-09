@@ -9,11 +9,9 @@ const useVisualMode = (initial) => {
     } else {
       setHistory((prev) => [...prev, mode]);
     }
-    //history.push(mode) -- don't edit your state directly -- change history through setHistory
   };
 
   const back = () => {
-    //console.log("....back", mode, history);
     if (history.length > 1) {
       history.pop();
     }
