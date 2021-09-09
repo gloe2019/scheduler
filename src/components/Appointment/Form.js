@@ -7,6 +7,7 @@ export default function Form(props) {
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
+  console.log(">>>Form props", props);
   const reset = () => {
     setName("");
     setInterviewer(null);

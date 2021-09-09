@@ -105,11 +105,6 @@ const useApplicationData = () => {
           interview: null,
         },
       });
-      // setState({
-      //   ...state,
-      //   appointments,
-      //   days: updateSpots(),
-      // });
     });
   };
 
