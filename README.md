@@ -1,4 +1,5 @@
 # Interview Scheduler
+[![CircleCI](https://circleci.com/gh/gloe2019/scheduler/tree/master.svg?style=svg)](https://circleci.com/gh/gloe2019/scheduler/tree/master)
 
 ## About the Project
 - Scheduler is a slick single page application built with React. 
