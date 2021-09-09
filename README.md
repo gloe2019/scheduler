@@ -23,9 +23,8 @@
 ### Delete an Interview
 [Deleting an interview](https://user-images.githubusercontent.com/46451257/132634721-d12b1da0-3269-460f-a27f-b5e8624dfe87.mp4)
 
-
-
-
+## Live Preview
+- The backend (API/Postgres Database) has already been deployed to Heroku, and the Frontend will be hosted on Netlify shortly. (Watch this space)
 
 
 ## Setup
