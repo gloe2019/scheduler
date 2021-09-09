@@ -4,7 +4,7 @@ import "./DayListItem.scss";
 import { isProperty } from "@babel/types";
 
 export default function DayListItem(props) {
-  //console.log(">>>>>", props);
+  // console.log(">>>>>", props);
   const dayClass = classNames("day-list__item", {
     "day-list__item--selected": props.selected,
     "day-list__item--full": props.spots === 0,
@@ -25,7 +25,7 @@ export default function DayListItem(props) {
   return (
     <li
       className={dayClass}
-      onClick={() => props.setDay(props.name)}
+      onClick={() => props.dispatch({ type: "SET_DAY", payload: props.name })}
       data-testid='day'
     >
       <h2 className='text--regular'>{props.name}</h2>

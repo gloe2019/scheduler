@@ -17,7 +17,6 @@ export function getAppointmentsForDay(state, day) {
 export function getInterviewersForDay(state, day) {
   const dayInterviewers = [];
   const foundDay = state.days.find((el) => el.name === day);
-
   if (!foundDay || foundDay.interviewers.length === 0) {
     return dayInterviewers; //check for false case first, return without executing code
   }

@@ -17,7 +17,7 @@ import {
 import useApplicationData from "hooks/useApplicationData";
 
 export default function Application(props) {
-  const { state, setDay, bookInterview, cancelInterview } =
+  const { state, dispatch, bookInterview, cancelInterview } =
     useApplicationData();
 
   const appointments = getAppointmentsForDay(state, state.day);
@@ -47,7 +47,7 @@ export default function Application(props) {
         />
         <hr className='sidebar__separator sidebar--centered' />
         <nav className='sidebar__menu'>
-          <DayList days={state.days} day={state.day} setDay={setDay} />
+          <DayList days={state.days} day={state.day} dispatch={dispatch} />
         </nav>
         <img
           className='sidebar__lhl sidebar--centered'
