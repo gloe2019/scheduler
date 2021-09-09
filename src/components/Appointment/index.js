@@ -76,7 +76,7 @@ export default function Appointment(props) {
       {mode === EDIT && (
         <Form
           interviewers={interviewers}
-          interviewer={interview.interviewer} //don't pass in the id
+          interviewer={interview.interviewer.id} //don't pass in the id
           name={interview.student}
           onCancel={() => transition(SHOW)}
           onSave={save}
