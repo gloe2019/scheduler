@@ -19,21 +19,21 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
 
-deploy:
-  machine:
-    enabled: true
+  deploy:
+    machine:
+      enabled: true
 
-  working_directory: ~/client
+    working_directory: ~/client
 
-  steps:
-    - add_ssh_keys:
-        fingerprints:
-          - "d1:94:d4:62:92:55:82:33:57:c7:69:00:fb:60:c5:f4"
-    - checkout
-    - run:
-        name: Push Master to Production
-        command: |
-          git push github.com:gloe2019/scheduler.git master:production
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "d1:94:d4:62:92:55:82:33:57:c7:69:00:fb:60:c5:f4"
+      - checkout
+      - run:
+          name: Push Master to Production
+          command: |
+            git push github.com:gloe2019/scheduler.git master:production
 
 workflows:
   version: 2
