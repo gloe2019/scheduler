@@ -9,7 +9,7 @@
 - This project was developed in a test-driven way. From the onset, components were developed and tested in visually with Storybook. Once components were visually completed, unit tests were written for each component and tests were run with frequently during development until each test passed. After Unit testing, I got to practice Integration testing with Jest and render functions from the react-testing-library to increase code covereage for key components. Once that was completed, E2E testing was done with Cypress to confirm the apps core functionality. 
 
 ## Try it out
-- The backend (API/Postgres Database) was deployed to **Heroku**, and the frontend is hosted on **Netlify**. [Check it out](https://quizzical-stonebraker-c0e5bf.netlify.app/)
+- The backend (API/Postgres Database) was deployed to **Heroku**, and the frontend is hosted on **Netlify**. [Check it out](https://ge-interview-scheduler.netlify.app/)
 
 
 ## Screenshots
