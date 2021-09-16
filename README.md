@@ -1,6 +1,6 @@
 # Interview Scheduler
 [![CircleCI](https://circleci.com/gh/gloe2019/scheduler/tree/master.svg?style=svg)](https://circleci.com/gh/gloe2019/scheduler/tree/master)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f000aae7-345f-4cfd-85cd-729d898e6451/deploy-status)](https://app.netlify.com/sites/ge-interview-scheduler/deploys)
 ## About the Project
 - Scheduler is a slick single page application built with React. 
 - It allows users to schedule interviews by selecting an available spot and their preferred interviewer. Interviews can be edited to change the student name or select a new interviewer. Interviews can also be deleted. 
