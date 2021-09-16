@@ -30,7 +30,7 @@ export default function Appointment(props) {
       student: name,
       interviewer,
     };
-    transition(SAVING, true);
+    transition(SAVING);
     props
       .bookInterview(id, interview)
       .then(() => {
