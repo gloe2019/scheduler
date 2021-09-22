@@ -1,6 +1,6 @@
 # Interview Scheduler
 [![CircleCI](https://circleci.com/gh/gloe2019/scheduler/tree/master.svg?style=svg)](https://circleci.com/gh/gloe2019/scheduler/tree/master)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f000aae7-345f-4cfd-85cd-729d898e6451/deploy-status)](https://app.netlify.com/sites/ge-interview-scheduler/deploys)
 ## About the Project
 - Scheduler is a slick single page application built with React. 
 - It allows users to schedule interviews by selecting an available spot and their preferred interviewer. Interviews can be edited to change the student name or select a new interviewer. Interviews can also be deleted. 
@@ -9,7 +9,7 @@
 - This project was developed in a test-driven way. From the onset, components were developed and tested in visually with Storybook. Once components were visually completed, unit tests were written for each component and tests were run with frequently during development until each test passed. After Unit testing, I got to practice Integration testing with Jest and render functions from the react-testing-library to increase code covereage for key components. Once that was completed, E2E testing was done with Cypress to confirm the apps core functionality. 
 
 ## Try it out
-- The backend (API/Postgres Database) was deployed to **Heroku**, and the frontend is hosted on **Netlify**. [Check it out](https://quizzical-stonebraker-c0e5bf.netlify.app/)
+- The backend (API/Postgres Database) was deployed to **Heroku**, and the frontend is hosted on **Netlify**. [Check it out](https://ge-interview-scheduler.netlify.app/)
 
 
 ## Screenshots
